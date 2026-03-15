@@ -1,0 +1,527 @@
+﻿/* styles.css - ПОЛНАЯ ВЕРСИЯ С АВТОПЕРЕВОДОМ */
+
+/* ========== ОСНОВНЫЕ СТИЛИ ДЛЯ ВЫДЕЛЕННЫХ ТЕРМИНОВ ========== */
+.academic-term {
+    cursor: help;
+    border-bottom: 2px dotted;
+    transition: background-color 0.2s;
+    display: inline;
+}
+
+.academic-term:hover {
+    background-color: rgba(255, 255, 0, 0.2);
+}
+
+/* Научные термины - синий */
+.scientific-term {
+    border-bottom-color: #2196F3;
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+/* Сленг и идиомы - оранжевый */
+.slang-term {
+    border-bottom-color: #FF9800;
+    background-color: rgba(255, 152, 0, 0.05);
+}
+
+/* Академические фразы - фиолетовый */
+.academic-term.academic {
+    border-bottom-color: #9C27B0;
+    background-color: rgba(156, 39, 176, 0.05);
+}
+
+/* ===== НОВЫЙ СТИЛЬ ДЛЯ АВТОПЕРЕВЕДЁННЫХ ТЕРМИНОВ ===== */
+.auto-translated-term {
+    border-bottom-color: #FF9800;
+    background-color: rgba(255, 152, 0, 0.05);
+    border-bottom-style: dashed;
+    position: relative;
+}
+
+.auto-translated-term:hover::after {
+    content: "🔍 автоперевод";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: #FF9800;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* ========== ВСПЛЫВАЮЩАЯ ПОДСКАЗКА ========== */
+.academic-tooltip {
+    position: absolute;
+    z-index: 10000;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: fadeIn 0.2s ease;
+}
+
+.tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.tooltip-header strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.term-category {
+    font-size: 12px;
+    padding: 3px 8px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    color: #666;
+}
+
+.tooltip-content {
+    margin-bottom: 12px;
+}
+
+.tooltip-content p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.tooltip-actions {
+    display: flex;
+    gap: 8px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.tooltip-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.save-term-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.save-term-btn:hover {
+    background: #45a049;
+}
+
+.more-info-btn {
+    background: #2196F3;
+    color: white;
+}
+
+.more-info-btn:hover {
+    background: #1976D2;
+}
+
+/* ========== БОКОВАЯ ПАНЕЛЬ ========== */
+.academic-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: slideIn 0.3s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #2196F3;
+    color: white;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-sidebar:hover {
+    opacity: 0.8;
+}
+
+/* Вкладки */
+.sidebar-tabs {
+    display: flex;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background: #e0e0e0;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #2196F3;
+    font-weight: bold;
+    border-bottom: 2px solid #2196F3;
+}
+
+/* Контент панели */
+.sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* ========== ДЕТАЛЬНАЯ ИНФОРМАЦИЯ О ТЕРМИНЕ ========== */
+.term-detail h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 20px;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 8px;
+}
+
+.term-detail p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.term-detail strong {
+    color: #333;
+}
+
+.save-from-sidebar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.save-from-sidebar:hover {
+    background: #45a049;
+}
+
+/* ========== ГЛОССАРИЙ ========== */
+#glossary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.glossary-item {
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border-left: 3px solid #2196F3;
+    position: relative;
+}
+
+.glossary-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.glossary-item p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.glossary-item small {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    color: #666;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.remove-term {
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.remove-term:hover {
+    background: #cc0000;
+}
+
+/* ========== СТАТИСТИКА ========== */
+.stat-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-item span {
+    color: #555;
+}
+
+.stat-item strong {
+    color: #2196F3;
+    font-size: 16px;
+}
+
+/* ========== ПОДВАЛ БОКОВОЙ ПАНЕЛИ ========== */
+.sidebar-footer {
+    display: flex;
+    padding: 15px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    gap: 10px;
+}
+
+.footer-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+#export-pdf {
+    background: #f44336;
+    color: white;
+}
+
+#export-pdf:hover {
+    background: #d32f2f;
+}
+
+#export-anki {
+    background: #9C27B0;
+    color: white;
+}
+
+#export-anki:hover {
+    background: #7B1FA2;
+}
+
+/* ========== УВЕДОМЛЕНИЯ ========== */
+.academic-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ========== СТИЛИ ДЛЯ КНОПКИ ПЕРЕВОДА ========== */
+#translate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    border: 2px solid white;
+}
+
+#translate-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+#translate-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-10px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateX(100%); 
+        opacity: 0;
+    }
+    to { 
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ========== */
+@media (max-width: 768px) {
+    .academic-sidebar {
+        width: 100%;
+    }
+    
+    .academic-tooltip {
+        max-width: 90%;
+        left: 5% !important;
+        right: 5% !important;
+    }
+    
+    .sidebar-header h3 {
+        font-size: 16px;
+    }
+    
+    .tab-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+    
+    #translate-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ========== СТИЛИ ДЛЯ ТЁМНОЙ ТЕМЫ ========== */
+@media (prefers-color-scheme: dark) {
+    .academic-tooltip {
+        background: #2d2d2d;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+    
+    .tooltip-header strong {
+        color: #fff;
+    }
+    
+    .tooltip-content p {
+        color: #ccc;
+    }
+    
+    .academic-sidebar {
+        background: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    .sidebar-tabs {
+        background: #333;
+        border-bottom-color: #444;
+    }
+    
+    .tab-btn {
+        color: #ccc;
+    }
+    
+    .tab-btn.active {
+        background: #2d2d2d;
+        color: #2196F3;
+    }
+    
+    .glossary-item {
+        background: #333;
+    }
+    
+    .glossary-item strong {
+        color: #fff;
+    }
+    
+    .stat-item {
+        background: #333;
+        color: #ccc;
+    }
+    
+    .sidebar-footer {
+        background: #333;
+        border-top-color: #444;
+    }
+    
+    .auto-translated-term:hover::after {
+        background: #FF9800;
+        color: white;
+    }
+}

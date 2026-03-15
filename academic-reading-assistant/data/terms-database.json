@@ -1,0 +1,244 @@
+﻿{
+  "scientific_terms": {
+    "sleep": {
+      "term": "sleep",
+      "definition": "A natural state of rest for the body and mind",
+      "translation": "сон",
+      "example": "Sleep is essential for health.",
+      "category": "scientific"
+    },
+    "activity": {
+      "term": "activity",
+      "definition": "The condition of being active or moving",
+      "translation": "активность",
+      "example": "Physical activity improves health.",
+      "category": "scientific"
+    },
+    "lifespan": {
+      "term": "lifespan",
+      "definition": "The length of time for which a person or animal lives",
+      "translation": "продолжительность жизни",
+      "example": "The study examined factors affecting lifespan.",
+      "category": "scientific"
+    },
+    "adolescence": {
+      "term": "adolescence",
+      "definition": "The period following the onset of puberty",
+      "translation": "подростковый возраст",
+      "example": "Adolescence is critical for brain development.",
+      "category": "scientific"
+    },
+    "neuroscientist": {
+      "term": "neuroscientist",
+      "definition": "A scientist who studies the nervous system",
+      "translation": "нейробиолог",
+      "example": "Neuroscientists study how the brain works.",
+      "category": "scientific"
+    },
+    "ageing": {
+      "term": "ageing",
+      "definition": "The process of growing old",
+      "translation": "старение",
+      "example": "Ageing is associated with physiological changes.",
+      "category": "scientific"
+    },
+    "disease": {
+      "term": "disease",
+      "definition": "A disorder of structure or function in an organism",
+      "translation": "болезнь",
+      "example": "The research aims to prevent disease.",
+      "category": "scientific"
+    },
+    "predict": {
+      "term": "predict",
+      "definition": "To say or estimate that something will happen",
+      "translation": "предсказывать",
+      "example": "Scientists can predict weather patterns.",
+      "category": "scientific"
+    },
+    "estimate": {
+      "term": "estimate",
+      "definition": "To roughly calculate or judge the value of something",
+      "translation": "оценивать",
+      "example": "Researchers estimate the cost.",
+      "category": "scientific"
+    },
+    "study": {
+      "term": "study",
+      "definition": "A detailed investigation and analysis of a subject",
+      "translation": "исследование",
+      "example": "The study was published in a journal.",
+      "category": "scientific"
+    },
+    "research": {
+      "term": "research",
+      "definition": "Systematic investigation to establish facts",
+      "translation": "исследование",
+      "example": "Medical research has advanced.",
+      "category": "scientific"
+    },
+    "pattern": {
+      "term": "pattern",
+      "definition": "A repeated decorative design or regular form",
+      "translation": "паттерн",
+      "example": "Sleep patterns vary.",
+      "category": "scientific"
+    },
+    "schedule": {
+      "term": "schedule",
+      "definition": "A plan for carrying out a process",
+      "translation": "расписание",
+      "example": "Regular sleep schedule.",
+      "category": "scientific"
+    },
+    "evening": {
+      "term": "evening",
+      "definition": "The period at the end of the day",
+      "translation": "вечер",
+      "example": "Activity decreases in the evening.",
+      "category": "scientific"
+    },
+    "hour": {
+      "term": "hour",
+      "definition": "A period of 60 minutes",
+      "translation": "час",
+      "example": "The experiment lasted hours.",
+      "category": "scientific"
+    },
+    "behaviour": {
+      "term": "behaviour",
+      "definition": "The way in which one acts or conducts oneself",
+      "translation": "поведение",
+      "example": "Animal behaviour studies.",
+      "category": "scientific"
+    },
+    "internal": {
+      "term": "internal",
+      "definition": "Of or situated on the inside",
+      "translation": "внутренний",
+      "example": "Internal body processes.",
+      "category": "scientific"
+    },
+    "complex": {
+      "term": "complex",
+      "definition": "Consisting of many different parts",
+      "translation": "сложный",
+      "example": "Complex biological systems.",
+      "category": "scientific"
+    },
+    "process": {
+      "term": "process",
+      "definition": "A series of actions to achieve a result",
+      "translation": "процесс",
+      "example": "The aging process.",
+      "category": "scientific"
+    },
+    "insight": {
+      "term": "insight",
+      "definition": "The capacity to gain accurate understanding",
+      "translation": "понимание",
+      "example": "Scientific insights.",
+      "category": "scientific"
+    },
+    "relationship": {
+      "term": "relationship",
+      "definition": "The way in which two things are connected",
+      "translation": "отношение",
+      "example": "The relationship between sleep and health.",
+      "category": "scientific"
+    },
+    "track": {
+      "term": "track",
+      "definition": "Follow the course of something",
+      "translation": "отслеживать",
+      "example": "Track changes over time.",
+      "category": "scientific"
+    },
+    "individual": {
+      "term": "individual",
+      "definition": "A single person or thing",
+      "translation": "индивид",
+      "example": "Each individual responds differently.",
+      "category": "scientific"
+    },
+    "factor": {
+      "term": "factor",
+      "definition": "A circumstance that contributes to a result",
+      "translation": "фактор",
+      "example": "Risk factors for disease.",
+      "category": "scientific"
+    },
+    "environment": {
+      "term": "environment",
+      "definition": "The surroundings or conditions",
+      "translation": "окружающая среда",
+      "example": "Environmental factors.",
+      "category": "scientific"
+    },
+    "genetic": {
+      "term": "genetic",
+      "definition": "Relating to genes or heredity",
+      "translation": "генетический",
+      "example": "Genetic predisposition.",
+      "category": "scientific"
+    },
+    "cellular": {
+      "term": "cellular",
+      "definition": "Relating to or consisting of cells",
+      "translation": "клеточный",
+      "example": "Cellular processes.",
+      "category": "scientific"
+    },
+    "molecular": {
+      "term": "molecular",
+      "definition": "Relating to molecules",
+      "translation": "молекулярный",
+      "example": "Molecular biology.",
+      "category": "scientific"
+    },
+    "biochemical": {
+      "term": "biochemical",
+      "definition": "Relating to the chemical processes in living organisms",
+      "translation": "биохимический",
+      "example": "Biochemical reactions.",
+      "category": "scientific"
+    },
+    "physiological": {
+      "term": "physiological",
+      "definition": "Relating to the branch of biology dealing with functions",
+      "translation": "физиологический",
+      "example": "Physiological changes.",
+      "category": "scientific"
+    },
+    "psychological": {
+      "term": "psychological",
+      "definition": "Relating to the mind or mental processes",
+      "translation": "психологический",
+      "example": "Psychological factors.",
+      "category": "scientific"
+    },
+    "cognitive": {
+      "term": "cognitive",
+      "definition": "Relating to mental processes of perception, memory, judgment",
+      "translation": "когнитивный",
+      "example": "Cognitive function.",
+      "category": "scientific"
+    },
+    "neural": {
+      "term": "neural",
+      "definition": "Relating to a nerve or the nervous system",
+      "translation": "нейронный",
+      "example": "Neural pathways.",
+      "category": "scientific"
+    },
+    "synaptic": {
+      "term": "synaptic",
+      "definition": "Relating to the junction between nerve cells",
+      "translation": "синаптический",
+      "example": "Synaptic transmission.",
+      "category": "scientific"
+    }
+  },
+  "idioms_slang": {},
+  "academic_phrases": {}
+}

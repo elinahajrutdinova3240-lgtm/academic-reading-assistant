@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: Arial;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .stats {
+      background: #f0f0f0;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Academic Assistant</h3>
+  
+  <div class="stats">
+    <div>В глоссарии: <span id="glossaryCount">?</span></div>
+    <div>На странице: <span id="processedCount">?</span></div>
+  </div>
+  
+  <button id="openSidebar">📋 Открыть панель</button>
+  <button id="openOptions">⚙️ Настройки</button>
+  <button id="exportCSV">📥 Экспорт</button>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
